@@ -101,7 +101,7 @@ function insertNode(parent: any, index: number, newNode: any, replace?: boolean)
 
   Array.prototype.splice.apply(parent.childNodes, (<any>[index, replace ? 1 : 0]).concat(newNodes));
 
-  newNodes.forEach(function (n) {
+  newNodes.forEach(function(n) {
     n.parentNode = parent;
   });
 
@@ -170,7 +170,7 @@ export function removeFakeRootElements(ast: Node) {
   injectedNodes.reverse().forEach(removeNodeSaveChildren);
 }
 
-export function append(parent: Node, newNode: Node) {
+export function append(parent: any, newNode: any) {
   const index = (parent.childNodes && parent.childNodes.length) || 0;
   insertNode(parent, index, newNode);
 }

@@ -18,6 +18,7 @@ const packages = [
   { name: 'test-runner-commands', type: 'ts', environment: 'node' },
   { name: 'test-runner-junit-reporter', type: 'ts', environment: 'node' },
   { name: 'test-runner-mocha', type: 'ts', environment: 'browser' },
+  { name: 'test-runner-import-maps', type: 'ts', environment: 'browser' },
 ];
 
 export { packages };
